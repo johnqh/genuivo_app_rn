@@ -39,6 +39,6 @@ export const STORAGE_KEYS = {
 
 // Tab names
 export const TAB_NAMES = {
-  HISTORIES: 'HistoriesTab',
+  CHAT: 'ChatTab',
   SETTINGS: 'SettingsTab',
 } as const;

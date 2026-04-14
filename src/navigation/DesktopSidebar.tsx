@@ -1,13 +1,16 @@
 import React from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
-import { ClockIcon, Cog6ToothIcon } from 'react-native-heroicons/outline';
 import {
-  ClockIcon as ClockIconSolid,
+  ChatBubbleLeftRightIcon,
+  Cog6ToothIcon,
+} from 'react-native-heroicons/outline';
+import {
+  ChatBubbleLeftRightIcon as ChatBubbleLeftRightIconSolid,
   Cog6ToothIcon as Cog6ToothIconSolid,
 } from 'react-native-heroicons/solid';
 import { useAppColors } from '@/hooks/useAppColors';
 
-export type SidebarTab = 'HistoriesTab' | 'SettingsTab';
+export type SidebarTab = 'ChatTab' | 'SettingsTab';
 
 interface DesktopSidebarProps {
   activeTab: SidebarTab;
@@ -17,7 +20,7 @@ interface DesktopSidebarProps {
 const ICON_SIZE = 22;
 
 const tabs: { key: SidebarTab; label: string }[] = [
-  { key: 'HistoriesTab', label: 'Histories' },
+  { key: 'ChatTab', label: 'Chat' },
   { key: 'SettingsTab', label: 'Settings' },
 ];
 
@@ -31,11 +34,11 @@ function TabIcon({
   color: string;
 }) {
   switch (tab) {
-    case 'HistoriesTab':
+    case 'ChatTab':
       return focused ? (
-        <ClockIconSolid color={color} size={ICON_SIZE} />
+        <ChatBubbleLeftRightIconSolid color={color} size={ICON_SIZE} />
       ) : (
-        <ClockIcon color={color} size={ICON_SIZE} />
+        <ChatBubbleLeftRightIcon color={color} size={ICON_SIZE} />
       );
     case 'SettingsTab':
       return focused ? (
@@ -57,7 +60,7 @@ export function DesktopSidebar({ activeTab, onTabPress }: DesktopSidebarProps) {
       ]}
     >
       <View style={styles.logo}>
-        <Text style={[styles.logoText, { color: appColors.primary }]}>S</Text>
+        <Text style={[styles.logoText, { color: appColors.primary }]}>G</Text>
       </View>
       {tabs.map(({ key, label }) => {
         const focused = activeTab === key;

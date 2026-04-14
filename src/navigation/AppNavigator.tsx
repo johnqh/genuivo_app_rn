@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Platform, useColorScheme } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { ClockIcon, Cog6ToothIcon } from 'react-native-heroicons/outline';
 import {
-  ClockIcon as ClockIconSolid,
+  ChatBubbleLeftRightIcon,
+  Cog6ToothIcon,
+} from 'react-native-heroicons/outline';
+import {
+  ChatBubbleLeftRightIcon as ChatBubbleLeftRightIconSolid,
   Cog6ToothIcon as Cog6ToothIconSolid,
 } from 'react-native-heroicons/solid';
 
@@ -12,7 +15,7 @@ import { lightTheme, darkTheme } from '@/config/theme';
 import { useSettingsStore } from '@/stores/settingsStore';
 import type { RootTabParamList } from './types';
 
-import { HistoriesStack } from './HistoriesStack';
+import { ChatStack } from './ChatStack';
 import { SettingsStack } from './SettingsStack';
 import { DesktopSidebar, type SidebarTab } from './DesktopSidebar';
 
@@ -20,8 +23,7 @@ const isDesktop = Platform.OS === 'macos' || Platform.OS === 'windows';
 
 const Tab = createBottomTabNavigator<RootTabParamList>();
 
-// Tab icon render functions defined outside component to avoid unstable references
-function renderHistoriesIcon({
+function renderChatIcon({
   focused,
   color,
   size,
@@ -31,9 +33,9 @@ function renderHistoriesIcon({
   size: number;
 }) {
   return focused ? (
-    <ClockIconSolid color={color} size={size} />
+    <ChatBubbleLeftRightIconSolid color={color} size={size} />
   ) : (
-    <ClockIcon color={color} size={size} />
+    <ChatBubbleLeftRightIcon color={color} size={size} />
   );
 }
 
@@ -54,12 +56,12 @@ function renderSettingsIcon({
 }
 
 const tabComponents: Record<SidebarTab, React.ComponentType> = {
-  HistoriesTab: HistoriesStack,
+  ChatTab: ChatStack,
   SettingsTab: SettingsStack,
 };
 
 function DesktopNavigator({ theme }: { theme: typeof lightTheme }) {
-  const [activeTab, setActiveTab] = useState<SidebarTab>('HistoriesTab');
+  const [activeTab, setActiveTab] = useState<SidebarTab>('ChatTab');
   const ActiveComponent = tabComponents[activeTab];
 
   return (
@@ -89,11 +91,11 @@ function MobileNavigator({ theme }: { theme: typeof lightTheme }) {
         }}
       >
         <Tab.Screen
-          name='HistoriesTab'
-          component={HistoriesStack}
+          name='ChatTab'
+          component={ChatStack}
           options={{
-            tabBarLabel: 'Histories',
-            tabBarIcon: renderHistoriesIcon,
+            tabBarLabel: 'Chat',
+            tabBarIcon: renderChatIcon,
           }}
         />
         <Tab.Screen

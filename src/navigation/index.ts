@@ -1,9 +1,8 @@
 export { AppNavigator } from './AppNavigator';
 export type {
   RootTabParamList,
-  HistoriesStackParamList,
+  ChatStackParamList,
   SettingsStackParamList,
-  HistoriesListScreenProps,
-  HistoryDetailScreenProps,
+  ChatScreenProps,
   SettingsScreenProps,
 } from './types';

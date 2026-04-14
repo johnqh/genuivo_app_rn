@@ -38,9 +38,9 @@ describe('constants', () => {
   });
 
   it('should export TAB_NAMES with expected keys', () => {
-    expect(TAB_NAMES.HISTORIES).toBeDefined();
+    expect(TAB_NAMES.CHAT).toBeDefined();
     expect(TAB_NAMES.SETTINGS).toBeDefined();
-    expect(typeof TAB_NAMES.HISTORIES).toBe('string');
+    expect(typeof TAB_NAMES.CHAT).toBe('string');
     expect(typeof TAB_NAMES.SETTINGS).toBe('string');
   });
 });
