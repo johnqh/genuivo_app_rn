@@ -1,0 +1,66 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "back": "Retour",
+    "or": "ou"
+  },
+  "histories": {
+    "title": "Histoires",
+    "loginPrompt": "Connectez-vous pour voir et gérer vos historiques.",
+    "add": "Ajouter l'historique",
+    "create": "Créer",
+    "empty": "Aucune histoire pour l'instant. Ajoute la première !",
+    "detail": "Détails de l'historique",
+    "notFound": "Histoire non trouvée.",
+    "datetime": "Date et heure",
+    "value": "Valeur",
+    "createdAt": "Créé le",
+    "yourTotal": "Votre total",
+    "globalTotal": "Total mondial",
+    "percentage": "Votre partage",
+    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cet historique ?"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "appearance": "Apparence",
+    "theme": {
+      "label": "Thème",
+      "system": "Système",
+      "light": "Lumière",
+      "dark": "Sombre"
+    },
+    "selectTheme": "Sélectionner le thème",
+    "themeDescription": "Schéma de couleurs de l'application",
+    "language": "Langue",
+    "languageDescription": "Sélectionnez votre langue préférée",
+    "account": "Compte",
+    "signInDescription": "Synchroniser les données entre les appareils",
+    "about": "À propos",
+    "version": "Version 1.0.0",
+    "copyright": "2024 {{companyName}}"
+  },
+  "auth": {
+    "signIn": "Se connecter",
+    "signUp": "S'inscrire",
+    "signOut": "Se déconnecter",
+    "signOutConfirm": "Êtes-vous sûr de vouloir vous déconnecter ?",
+    "email": "Courriel",
+    "password": "Mot de passe",
+    "continueWithGoogle": "Continuer avec Google",
+    "noAccount": "Vous n'avez pas de compte ? Inscrivez-vous",
+    "hasAccount": "Déjà un compte ? Se connecter",
+    "fillAllFields": "Veuillez remplir tous les champs",
+    "error": "Une erreur s'est produite",
+    "guest": "Invité",
+    "signedIn": "Connecté",
+    "createAccount": "Créer un compte",
+    "createAccountDescription": "Enregistrez vos données et synchronisez-les entre appareils"
+  },
+  "tabs": {
+    "histories": "Histoires",
+    "settings": "Paramètres"
+  }
+}

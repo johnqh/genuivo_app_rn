@@ -1,0 +1,78 @@
+require File.join(File.dirname(`node --print "require.resolve('expo/package.json')"`), "scripts/autolinking")
+require Pod::Executable.execute_command('node', ['-p',
+  'require.resolve(
+    "react-native/scripts/react_native_pods.rb",
+    {paths: [process.argv[1]]},
+  )', __dir__]).strip
+
+platform :ios, min_ios_version_supported
+prepare_react_native_project!
+
+$RNFirebaseAnalyticsWithoutAdIdSupport = true
+
+use_frameworks! :linkage => :static
+
+target 'StarterApp' do
+  pod 'GoogleUtilities', :modular_headers => true
+  use_expo_modules!
+
+  post_integrate do |installer|
+    begin
+      expo_patch_react_imports!(installer)
+    rescue => e
+      Pod::UI.warn e
+    end
+  end
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
+
+  post_install do |installer|
+    react_native_post_install(
+      installer,
+      config[:reactNativePath],
+      :mac_catalyst_enabled => false,
+    )
+
+    # Build speed optimizations for pods
+    ccache_clang   = File.join(__dir__, 'scripts', 'ccache-clang')
+    ccache_clangpp = File.join(__dir__, 'scripts', 'ccache-clang++')
+    use_ccache = File.executable?(ccache_clang) && `which ccache 2>/dev/null`.strip.length > 0
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |bc|
+        # ccache: cache C/C++/ObjC compilation via wrapper scripts
+        if use_ccache
+          bc.build_settings['CC']  = ccache_clang
+          bc.build_settings['CXX'] = ccache_clangpp
+        end
+        bc.build_settings['COMPILER_INDEX_STORE_ENABLE'] = 'NO'
+        if bc.name == 'Debug'
+          bc.build_settings['ONLY_ACTIVE_ARCH'] = 'YES'
+          bc.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf'
+        end
+      end
+    end
+
+    installer.target_installation_results.pod_target_installation_results
+      .each do |pod_name, target_installation_result|
+      target_installation_result.resource_bundle_targets.each do |resource_bundle_target|
+        resource_bundle_target.build_configurations.each do |config|
+          config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+        end
+      end
+    end
+
+    # Workaround: fmt pod fails to compile with Xcode 26 beta's stricter consteval handling.
+    # Redefine consteval as constexpr to avoid hard compilation errors.
+    installer.pods_project.targets.each do |target|
+      if target.name == 'fmt'
+        target.build_configurations.each do |config|
+          config.build_settings['OTHER_CPLUSPLUSFLAGS'] = '$(inherited) -Dconsteval=constexpr'
+        end
+      end
+    end
+  end
+end

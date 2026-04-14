@@ -1,0 +1,66 @@
+{
+  "common": {
+    "loading": "กำลังโหลด...",
+    "error": "ข้อผิดพลาด",
+    "cancel": "ยกเลิก",
+    "delete": "ลบ",
+    "back": "ย้อนกลับ",
+    "or": "หรือ"
+  },
+  "histories": {
+    "title": "ประวัติศาสตร์",
+    "loginPrompt": "เข้าสู่ระบบเพื่อดูและจัดการประวัติของคุณ",
+    "add": "เพิ่มประวัติ",
+    "create": "สร้าง",
+    "empty": "ยังไม่มีประวัติใด ๆ เลย โปรดเพิ่มประวัติแรกของคุณ!",
+    "detail": "รายละเอียดประวัติ",
+    "notFound": "ไม่พบประวัติ",
+    "datetime": "วันที่และเวลา",
+    "value": "ค่า",
+    "createdAt": "สร้างเมื่อ",
+    "yourTotal": "ยอดรวมของคุณ",
+    "globalTotal": "ยอดรวมทั่วโลก",
+    "percentage": "การแบ่งปันของคุณ",
+    "deleteConfirm": "คุณมั่นใจหรือไม่ว่าต้องการลบประวัตินี้?"
+  },
+  "settings": {
+    "title": "การตั้งค่า",
+    "appearance": "รูปลักษณ์",
+    "theme": {
+      "label": "หัวข้อ",
+      "system": "ระบบ",
+      "light": "แสง",
+      "dark": "มืด"
+    },
+    "selectTheme": "เลือกธีม",
+    "themeDescription": "รูปแบบสีของแอปพลิเคชัน",
+    "language": "ภาษา",
+    "languageDescription": "เลือกภาษาที่คุณต้องการ",
+    "account": "บัญชี",
+    "signInDescription": "ซิงค์ข้อมูลระหว่างอุปกรณ์",
+    "about": "เกี่ยวกับ",
+    "version": "เวอร์ชัน 1.0.0",
+    "copyright": "2024 {{companyName}}"
+  },
+  "auth": {
+    "signIn": "เข้าสู่ระบบ",
+    "signUp": "สมัครสมาชิก",
+    "signOut": "ออกจากระบบ",
+    "signOutConfirm": "คุณแน่ใจหรือว่าต้องการออกจากระบบ?",
+    "email": "อีเมล",
+    "password": "รหัสผ่าน",
+    "continueWithGoogle": "ดำเนินการต่อไปด้วย Google",
+    "noAccount": "ยังไม่มีบัญชี? สมัครสมาชิก",
+    "hasAccount": "มีบัญชีอยู่แล้วหรือ? เข้าสู่ระบบ",
+    "fillAllFields": "กรุณากรอกข้อมูลทุกช่อง",
+    "error": "เกิดข้อผิดพลาด",
+    "guest": "แขก",
+    "signedIn": "เข้าสู่ระบบแล้ว",
+    "createAccount": "สร้างบัญชี",
+    "createAccountDescription": "บันทึกข้อมูลของคุณและซิงค์ข้ามอุปกรณ์"
+  },
+  "tabs": {
+    "histories": "ประวัติศาสตร์",
+    "settings": "การตั้งค่า"
+  }
+}

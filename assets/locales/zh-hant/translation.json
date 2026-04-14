@@ -1,0 +1,66 @@
+{
+  "common": {
+    "loading": "載入中...",
+    "error": "錯誤",
+    "cancel": "取消",
+    "delete": "刪除",
+    "back": "返回",
+    "or": "或"
+  },
+  "histories": {
+    "title": "歷史",
+    "loginPrompt": "登入以查看和管理您的歷史記錄",
+    "add": "新增歷史",
+    "create": "建立",
+    "empty": "尚無歷史記錄。請添加您的第一条記錄！",
+    "detail": "歷史詳情",
+    "notFound": "未找到歷史記錄。",
+    "datetime": "日期與時間",
+    "value": "值",
+    "createdAt": "建立時間",
+    "yourTotal": "您的總金額",
+    "globalTotal": "全球總計",
+    "percentage": "您的分享",
+    "deleteConfirm": "您確定要刪除此歷史記錄嗎？"
+  },
+  "settings": {
+    "title": "設定",
+    "appearance": "外觀",
+    "theme": {
+      "label": "主題",
+      "system": "系統",
+      "light": "光",
+      "dark": "黑暗"
+    },
+    "selectTheme": "選擇主題",
+    "themeDescription": "應用配色方案",
+    "language": "語言",
+    "languageDescription": "選擇您偏好的語言",
+    "account": "帳戶",
+    "signInDescription": "在設備之間同步資料",
+    "about": "關於",
+    "version": "版本 1.0.0",
+    "copyright": "2024 {{companyName}}"
+  },
+  "auth": {
+    "signIn": "登入",
+    "signUp": "註冊",
+    "signOut": "登出",
+    "signOutConfirm": "您確定要登出嗎？",
+    "email": "電子郵件",
+    "password": "密碼",
+    "continueWithGoogle": "繼續使用 Google",
+    "noAccount": "沒有帳戶嗎？註冊",
+    "hasAccount": "已有帳戶？登入",
+    "fillAllFields": "請填寫所有欄位",
+    "error": "發生錯誤",
+    "guest": "客人",
+    "signedIn": "已登入",
+    "createAccount": "建立帳戶",
+    "createAccountDescription": "儲存您的資料並在裝置間同步"
+  },
+  "tabs": {
+    "histories": "歷史",
+    "settings": "設定"
+  }
+}

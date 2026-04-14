@@ -1,0 +1,22 @@
+{
+  "name": "main",
+  "displayName": "Genuivo",
+  "expo": {
+    "name": "Genuivo",
+    "slug": "genuivo-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sudobility.genuivo"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.sudobility.genuivo"
+    }
+  }
+}

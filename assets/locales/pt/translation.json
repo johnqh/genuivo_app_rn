@@ -1,0 +1,66 @@
+{
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "back": "Voltar",
+    "or": "ou"
+  },
+  "histories": {
+    "title": "Histórias",
+    "loginPrompt": "Faça login para ver e gerenciar seus históricos.",
+    "add": "Adicionar Histórico",
+    "create": "Criar",
+    "empty": "Ainda não há histórias. Adicione a sua primeira!",
+    "detail": "Detalhes do histórico",
+    "notFound": "História não encontrada.",
+    "datetime": "Data e hora",
+    "value": "Valor",
+    "createdAt": "Criado em",
+    "yourTotal": "Seu Total",
+    "globalTotal": "Total global",
+    "percentage": "Sua participação",
+    "deleteConfirm": "Tem certeza de que deseja excluir este histórico?"
+  },
+  "settings": {
+    "title": "Configurações",
+    "appearance": "Aparência",
+    "theme": {
+      "label": "Tema",
+      "system": "Sistema",
+      "light": "Luz",
+      "dark": "Escuro"
+    },
+    "selectTheme": "Selecionar Tema",
+    "themeDescription": "Esquema de cores do aplicativo",
+    "language": "Idioma",
+    "languageDescription": "Selecione seu idioma preferido",
+    "account": "Conta",
+    "signInDescription": "Sincronizar dados entre dispositivos",
+    "about": "Sobre",
+    "version": "Versão 1.0.0",
+    "copyright": "2024 {{companyName}}"
+  },
+  "auth": {
+    "signIn": "Entrar",
+    "signUp": "Inscrever-se",
+    "signOut": "Sair",
+    "signOutConfirm": "Tem certeza de que deseja sair?",
+    "email": "E-mail",
+    "password": "Senha",
+    "continueWithGoogle": "Continuar com o Google",
+    "noAccount": "Não tem uma conta? Registre-se",
+    "hasAccount": "Já tem uma conta? Faça login",
+    "fillAllFields": "Por favor, preencha todos os campos",
+    "error": "Ocorreu um erro",
+    "guest": "Convidado",
+    "signedIn": "Conectado",
+    "createAccount": "Criar conta",
+    "createAccountDescription": "Guarde os seus dados e sincronize entre dispositivos"
+  },
+  "tabs": {
+    "histories": "Histórias",
+    "settings": "Configurações"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "back": "العودة",
+    "or": "أو"
+  },
+  "histories": {
+    "title": "تاريخ",
+    "loginPrompt": "قم بتسجيل الدخول لعرض و إدارة سجلاتك.",
+    "add": "إضافة السيرة",
+    "create": "أنشئ",
+    "empty": "لا توجد سجلات بعد. أضف الأولى لك!",
+    "detail": "تفاصيل التاريخ",
+    "notFound": "لم يتم العثور على تاريخ.",
+    "datetime": "التاريخ والوقت",
+    "value": "قيمة",
+    "createdAt": "تم الإنشاء في",
+    "yourTotal": "إجماليك",
+    "globalTotal": "المجموع العالمي",
+    "percentage": "مُشارَكتُك",
+    "deleteConfirm": "هل أنت متأكد أنك تريد حذف هذا السجل؟"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "appearance": "المظهر",
+    "theme": {
+      "label": "الموضوع",
+      "system": "نظام",
+      "light": "ضوء",
+      "dark": "داكن"
+    },
+    "selectTheme": "اختَر الثيم",
+    "themeDescription": "نمط ألوان التطبيق",
+    "language": "لغة",
+    "languageDescription": "اختر لغتك المفضلة",
+    "account": "حساب",
+    "signInDescription": "مزامنة البيانات عبر الأجهزة",
+    "about": "حول",
+    "version": "الإصدار 1.0.0",
+    "copyright": "2024 {{companyName}}"
+  },
+  "auth": {
+    "signIn": "تسجيل الدخول",
+    "signUp": "تسجيل الدخول",
+    "signOut": "تسجيل الخروج",
+    "signOutConfirm": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "continueWithGoogle": "استمر مع جوجل",
+    "noAccount": "ليس لديك حساب؟ سجّل الآن",
+    "hasAccount": "هل لديك حساب بالفعل؟ سجّل الدخول",
+    "fillAllFields": "يرجى ملء جميع الحقول",
+    "error": "حدث خطأ",
+    "guest": "ضيف",
+    "signedIn": "مُسجَّل دخولًا",
+    "createAccount": "إنشاء حساب",
+    "createAccountDescription": "احفظ بياناتك وقم بتوحيد المزامنة عبر الأجهزة"
+  },
+  "tabs": {
+    "histories": "تاريخ",
+    "settings": "الإعدادات"
+  }
+}

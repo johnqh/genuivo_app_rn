@@ -1,0 +1,66 @@
+{
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Lỗi",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "back": "Quay lại",
+    "or": "hoặc"
+  },
+  "histories": {
+    "title": "Lịch sử",
+    "loginPrompt": "Đăng nhập để xem và quản lý lịch sử của bạn",
+    "add": "Thêm lịch sử",
+    "create": "Tạo",
+    "empty": "Chưa có lịch sử nào cả. Hãy thêm lịch sử đầu tiên của bạn!",
+    "detail": "Chi tiết lịch sử",
+    "notFound": "Không tìm thấy lịch sử.",
+    "datetime": "Ngày và giờ",
+    "value": "Giá trị",
+    "createdAt": "Được tạo lúc",
+    "yourTotal": "Tổng cộng của bạn",
+    "globalTotal": "Tổng toàn cầu",
+    "percentage": "Sự chia sẻ của bạn",
+    "deleteConfirm": "Bạn có chắc muốn xóa lịch sử này không?"
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "appearance": "Ngoại hình",
+    "theme": {
+      "label": "Chủ đề",
+      "system": "Hệ thống",
+      "light": "Ánh sáng",
+      "dark": "Tối"
+    },
+    "selectTheme": "Chọn chủ đề",
+    "themeDescription": "Bộ màu ứng dụng",
+    "language": "Ngôn ngữ",
+    "languageDescription": "Chọn ngôn ngữ yêu thích của bạn",
+    "account": "Tài khoản",
+    "signInDescription": "Đồng bộ hóa dữ liệu giữa các thiết bị",
+    "about": "Về",
+    "version": "Phiên bản 1.0.0",
+    "copyright": "2024 {{companyName}}"
+  },
+  "auth": {
+    "signIn": "Đăng nhập",
+    "signUp": "Đăng ký",
+    "signOut": "Đăng xuất",
+    "signOutConfirm": "Bạn có chắc chắn muốn đăng xuất không?",
+    "email": "Thư điện tử",
+    "password": "Mật khẩu",
+    "continueWithGoogle": "Tiếp tục với Google",
+    "noAccount": "Chưa có tài khoản? Đăng ký",
+    "hasAccount": "Đã có tài khoản? Đăng nhập",
+    "fillAllFields": "Vui lòng điền đầy đủ tất cả các trường",
+    "error": "Đã xảy ra lỗi",
+    "guest": "Khách",
+    "signedIn": "Đã đăng nhập",
+    "createAccount": "Tạo tài khoản",
+    "createAccountDescription": "Lưu dữ liệu của bạn và đồng bộ hóa trên các thiết bị"
+  },
+  "tabs": {
+    "histories": "Lịch sử",
+    "settings": "Cài đặt"
+  }
+}

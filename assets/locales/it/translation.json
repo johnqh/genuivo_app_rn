@@ -1,0 +1,66 @@
+{
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "back": "Indietro",
+    "or": "o"
+  },
+  "histories": {
+    "title": "Storie",
+    "loginPrompt": "Accedi per visualizzare e gestire i tuoi storici.",
+    "add": "Aggiungi cronologia",
+    "create": "Crea",
+    "empty": "Ancora nessuna storia. Aggiungi la prima!",
+    "detail": "Dettagli cronologici",
+    "notFound": "Storia non trovata.",
+    "datetime": "Data e ora",
+    "value": "Valore",
+    "createdAt": "Creato il",
+    "yourTotal": "Il tuo totale",
+    "globalTotal": "Totale globale",
+    "percentage": "Il tuo contributo",
+    "deleteConfirm": "Sei sicuro di voler eliminare questa cronologia?"
+  },
+  "settings": {
+    "title": "Impostazioni",
+    "appearance": "Aspetto",
+    "theme": {
+      "label": "Tema",
+      "system": "Sistema",
+      "light": "Luce",
+      "dark": "Scuro"
+    },
+    "selectTheme": "Seleziona tema",
+    "themeDescription": "Tema colori dell'app",
+    "language": "Lingua",
+    "languageDescription": "Seleziona la tua lingua preferita",
+    "account": "Account",
+    "signInDescription": "Sincronizza i dati tra i dispositivi",
+    "about": "Informazioni",
+    "version": "Versione 1.0.0",
+    "copyright": "2024 {{companyName}}"
+  },
+  "auth": {
+    "signIn": "Accedi",
+    "signUp": "Iscriviti",
+    "signOut": "Esci",
+    "signOutConfirm": "Sei sicuro di voler uscire?",
+    "email": "Posta elettronica",
+    "password": "Password",
+    "continueWithGoogle": "Continua con Google",
+    "noAccount": "Non hai un account? Iscriviti",
+    "hasAccount": "Hai già un account? Accedi",
+    "fillAllFields": "Si prega di compilare tutti i campi",
+    "error": "Si è verificato un errore",
+    "guest": "Ospite",
+    "signedIn": "Connesso",
+    "createAccount": "Crea un account",
+    "createAccountDescription": "Salva i tuoi dati e sincronizzali tra dispositivi"
+  },
+  "tabs": {
+    "histories": "Storie",
+    "settings": "Impostazioni"
+  }
+}

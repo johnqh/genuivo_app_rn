@@ -1,0 +1,66 @@
+{
+  "common": {
+    "loading": "Lade... ",
+    "error": "Fehler",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "back": "Zurück",
+    "or": "oder"
+  },
+  "histories": {
+    "title": "Geschichten",
+    "loginPrompt": "Melden Sie sich an, um Ihre Verläufe anzuzeigen und zu verwalten.",
+    "add": "Verlauf hinzufügen",
+    "create": "Erstellen",
+    "empty": "Noch keine Historien. Füge deine erste hinzu!",
+    "detail": "Verlauf Detail",
+    "notFound": "Geschichte nicht gefunden.",
+    "datetime": "Datum & Uhrzeit",
+    "value": "Wert",
+    "createdAt": "Erstellt am",
+    "yourTotal": "Ihr Gesamtbetrag",
+    "globalTotal": "Gesamtsumme",
+    "percentage": "Dein Anteil",
+    "deleteConfirm": "Sind Sie sicher, dass Sie diese Historie löschen möchten?"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "appearance": "Aussehen",
+    "theme": {
+      "label": "Thema",
+      "system": "System",
+      "light": "Licht",
+      "dark": "Dunkel"
+    },
+    "selectTheme": "Thema auswählen",
+    "themeDescription": "App-Farbschema",
+    "language": "Sprache",
+    "languageDescription": "Wählen Sie Ihre bevorzugte Sprache",
+    "account": "Konto",
+    "signInDescription": "Daten zwischen Geräten synchronisieren",
+    "about": "Über",
+    "version": "Version 1.0.0",
+    "copyright": "2024 {{companyName}}"
+  },
+  "auth": {
+    "signIn": "Anmelden",
+    "signUp": "Registrieren",
+    "signOut": "Abmelden",
+    "signOutConfirm": "Sind Sie sicher, dass Sie sich abmelden möchten?",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "continueWithGoogle": "Weiter mit Google",
+    "noAccount": "Noch kein Konto? Jetzt anmelden",
+    "hasAccount": "Bereits ein Konto vorhanden? Einloggen",
+    "fillAllFields": "Bitte füllen Sie alle Felder aus",
+    "error": "Ein Fehler ist aufgetreten",
+    "guest": "Gast",
+    "signedIn": "Angemeldet",
+    "createAccount": "Konto erstellen",
+    "createAccountDescription": "Speichern Sie Ihre Daten und synchronisieren Sie sie über Geräte"
+  },
+  "tabs": {
+    "histories": "Geschichten",
+    "settings": "Einstellungen"
+  }
+}
