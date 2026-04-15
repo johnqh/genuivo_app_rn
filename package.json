@@ -1,6 +1,6 @@
 {
   "name": "genuivo_app_rn",
-  "version": "1.0.41",
+  "version": "1.0.42",
   "displayName": "Starter App",
   "private": true,
   "scripts": {
@@ -34,13 +34,13 @@
     "@react-navigation/bottom-tabs": "^7.10.1",
     "@react-navigation/native": "^7.1.28",
     "@react-navigation/native-stack": "^7.10.1",
-    "@sudobility/auth_lib": "^0.0.69",
+    "@sudobility/auth_lib": "^0.0.70",
     "@sudobility/building_blocks_rn": "^0.0.24",
     "@sudobility/design": "^1.1.29",
     "@sudobility/di": "^1.5.52",
     "@sudobility/di_rn": "^0.1.77",
     "@sudobility/genui_rn": "^0.1.12",
-    "@sudobility/genuivo_lib": "^0.0.18",
+    "@sudobility/genuivo_lib": "^0.0.19",
     "@sudobility/types": "^1.9.61",
     "@tanstack/react-query": "^5.90.19",
     "expo": "~54.0.32",
