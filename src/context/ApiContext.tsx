@@ -9,13 +9,14 @@
  * The token and userId are refreshed whenever the auth state changes.
  */
 
-import React, { createContext, useContext, useMemo, useRef } from 'react';
+import React, { createContext, useContext, useEffect, useMemo, useRef } from 'react';
 import type {
   NetworkClient,
   NetworkResponse,
   NetworkRequestOptions,
   Optional,
 } from '@sudobility/types';
+import { initializeStarterClient } from '@sudobility/genuivo_client';
 import { env } from '@/config/env';
 import { useAuth } from './AuthContext';
 
@@ -220,6 +221,10 @@ export function ApiProvider({ children }: { children: React.ReactNode }) {
   const refreshTokenRef = useRef(refreshToken);
   refreshTokenRef.current = refreshToken;
   const networkClient = useMemo(() => createNetworkClient(refreshTokenRef), []);
+
+  useEffect(() => {
+    initializeStarterClient({ baseUrl: env.API_URL, networkClient });
+  }, [networkClient]);
 
   const value = useMemo<ApiContextValue>(
     () => ({

@@ -16,7 +16,7 @@ import { trackScreenView } from '@/analytics';
 
 export default function ChatScreen() {
   const appColors = useAppColors();
-  const { networkClient, baseUrl, userId, token } = useApi();
+  const { userId, token } = useApi();
   const {
     currentRenderable,
     isLoading,
@@ -24,7 +24,7 @@ export default function ChatScreen() {
     handleAction,
     handleSubmit,
     restart,
-  } = useChatManager({ networkClient, baseUrl, userId, token });
+  } = useChatManager({ userId, token });
 
   useEffect(() => {
     trackScreenView('Chat', 'ChatScreen');
