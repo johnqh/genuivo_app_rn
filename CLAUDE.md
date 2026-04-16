@@ -15,7 +15,7 @@ React Native mobile application for the Genuivo project.
 - **Auth**: Firebase Auth with AsyncStorage persistence, Google Sign-In
 - **i18n**: i18next
 - **Test**: Jest
-- **Bundler**: Metro (port 8084)
+- **Bundler**: Metro (port 8087)
 
 ## Project Structure
 
@@ -57,7 +57,7 @@ src/
 ## Commands
 
 ```bash
-bun run start          # Start Metro bundler on port 8084
+bun run start          # Start Metro bundler on port 8087
 bun run android        # Run on Android device/emulator
 bun run ios            # Run on iOS device/simulator
 bun run lint           # Run ESLint
@@ -93,7 +93,7 @@ Environment variables (EXPO*PUBLIC*\* prefix):
 
 | Variable                           | Description          | Default          |
 | ---------------------------------- | -------------------- | ---------------- |
-| `EXPO_PUBLIC_API_URL`              | Backend API URL      | `localhost:8022` |
+| `EXPO_PUBLIC_API_URL`              | Backend API URL      | `localhost:8026` |
 | `EXPO_PUBLIC_FIREBASE_API_KEY`     | Firebase API key     | required         |
 | `EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN` | Firebase auth domain | required         |
 | `EXPO_PUBLIC_FIREBASE_PROJECT_ID`  | Firebase project ID  | required         |
@@ -128,8 +128,8 @@ Environment variables (EXPO*PUBLIC*\* prefix):
 
 ## Gotchas
 
-- The prestart script merges `.env` files -- environment changes require restarting Metro (port 8084)
-- Metro runs on port `8084` (not the default 8081) -- ensure no port conflicts
+- The prestart script merges `.env` files -- environment changes require restarting Metro (port 8087)
+- Metro runs on port `8087` (not the default 8081) -- ensure no port conflicts
 - The `localStorage` polyfill must be imported before any Zustand persist store is created
 - Firebase Auth uses `AsyncStorage` for persistence -- different from the web app's approach
 - Environment variables use `EXPO_PUBLIC_*` prefix

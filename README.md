@@ -15,7 +15,7 @@ Environment variables (`EXPO_PUBLIC_*` prefix):
 
 | Variable                           | Description          | Default          |
 | ---------------------------------- | -------------------- | ---------------- |
-| `EXPO_PUBLIC_API_URL`              | Backend API URL      | `localhost:8022` |
+| `EXPO_PUBLIC_API_URL`              | Backend API URL      | `localhost:8026` |
 | `EXPO_PUBLIC_FIREBASE_API_KEY`     | Firebase API key     | required         |
 | `EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN` | Firebase auth domain | required         |
 | `EXPO_PUBLIC_FIREBASE_PROJECT_ID`  | Firebase project ID  | required         |

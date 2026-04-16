@@ -27,7 +27,7 @@
 - (NSURL *)bundleURL
 {
 #if DEBUG
-  NSURL *url = [NSURL URLWithString:@"http://localhost:8084/index.bundle?platform=macos&dev=true&minify=false"];
+  NSURL *url = [NSURL URLWithString:@"http://localhost:8087/index.bundle?platform=macos&dev=true&minify=false"];
   NSLog(@"[StarterApp] bundleURL called, returning: %@", url);
   return url;
 #else

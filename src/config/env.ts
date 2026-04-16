@@ -9,7 +9,7 @@
 
 export const env = {
   // API URL
-  API_URL: process.env.EXPO_PUBLIC_API_URL ?? 'http://localhost:8022',
+  API_URL: process.env.EXPO_PUBLIC_API_URL ?? 'http://localhost:8026',
 
   // App identity
   APP_NAME: process.env.VITE_APP_NAME ?? 'Starter App',
