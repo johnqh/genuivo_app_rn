@@ -23,8 +23,8 @@
         "@sudobility/di": "^1.5.52",
         "@sudobility/di_rn": "^0.1.77",
         "@sudobility/genui_rn": "^0.1.12",
-        "@sudobility/genuivo_client": "^0.0.24",
-        "@sudobility/genuivo_lib": "^0.0.21",
+        "@sudobility/genuivo_client": "^0.0.25",
+        "@sudobility/genuivo_lib": "^0.0.22",
         "@sudobility/types": "^1.9.61",
         "@tanstack/react-query": "^5.90.19",
         "expo": "~54.0.32",
@@ -647,9 +647,9 @@
 
     "@sudobility/genui_types": ["@sudobility/genui_types@0.0.1", "", {}, "sha512-upYoJVpy2y+cgIW2TwJtMuPhxzis42Dk5X6UtViTSh61GwnWofwK2atXsOrtDXPFj9vMrxJOVEOEu8UDR90p7g=="],
 
-    "@sudobility/genuivo_client": ["@sudobility/genuivo_client@0.0.24", "", { "peerDependencies": { "@sudobility/genui_types": "^0.0.1", "@sudobility/types": "^1.9.61", "@tanstack/react-query": ">=5.0.0", "react": ">=18.0.0" } }, "sha512-OGhHje+kNZfd2JeOKlCYf7AS+rXC1KhM9tBb7L/Dt2yCLpY0srkuNNNEsowR6VCnOFpbxsD7PlhBunRfTTf0HQ=="],
+    "@sudobility/genuivo_client": ["@sudobility/genuivo_client@0.0.25", "", { "peerDependencies": { "@sudobility/genui_types": "^0.0.1", "@sudobility/types": "^1.9.61", "@tanstack/react-query": ">=5.0.0", "react": ">=18.0.0" } }, "sha512-38wHBZRoythcH/euKpPENWtpVUSEZDUe9e+pEqzgHrkWmpXCkR4F/V8yMXbErXhrBmVSzuXDhUZksKgoCOuzqw=="],
 
-    "@sudobility/genuivo_lib": ["@sudobility/genuivo_lib@0.0.21", "", { "peerDependencies": { "@sudobility/genui_types": "^0.0.1", "@sudobility/types": "^1.9.61", "@tanstack/react-query": ">=5.0.0", "react": ">=18.0.0", "zustand": ">=5.0.0" } }, "sha512-4ERQsz7u9ns0/qVAanTlZ3SkNsH34NCiIp2T6COuxaCH5FfZtKE9b9z19KidPXukWC6yEDmNG8qBJyo44eXhjw=="],
+    "@sudobility/genuivo_lib": ["@sudobility/genuivo_lib@0.0.22", "", { "peerDependencies": { "@sudobility/genui_types": "^0.0.1", "@sudobility/types": "^1.9.61", "@tanstack/react-query": ">=5.0.0", "react": ">=18.0.0", "zustand": ">=5.0.0" } }, "sha512-8X5A1IEJ/mSKJPA+q5CJtAxWRw6K4nLiEhPO63ha4SiH+WHhRoZfOvYazJr7osWtWZztots0loO3gnsVBYTipw=="],
 
     "@sudobility/types": ["@sudobility/types@1.9.61", "", {}, "sha512-SODGpstB/iKfK3H/4BvJx/FBcc1h3gutUjGotyxN19VnOfWyzaDoEmW7eyoxOAYhZyXMXagSiii+NIEZvuxKog=="],
 
