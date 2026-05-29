@@ -2,7 +2,8 @@ import '@/polyfills/localStorage'; // Must be first — before any Zustand store
 import 'react-native-gesture-handler';
 import '@/i18n'; // Initialize i18n
 import React, { useState, useEffect } from 'react';
-import { StyleSheet } from 'react-native';
+import { NativeModules, StyleSheet } from 'react-native';
+NativeModules.DevLoadingView?.hide();
 import { loadStoredLanguagePreference } from '@/i18n';
 import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
