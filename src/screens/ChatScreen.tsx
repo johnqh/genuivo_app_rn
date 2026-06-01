@@ -84,11 +84,8 @@ export default function ChatScreen() {
           <Pressable
             style={[
               styles.button,
-              {
-                backgroundColor: 'transparent',
-                borderWidth: 1,
-                borderColor: appColors.border,
-              },
+              styles.secondaryButton,
+              { borderColor: appColors.border },
             ]}
             onPress={restart}
           >
@@ -132,6 +129,10 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     borderRadius: 8,
     alignItems: 'center',
+  },
+  secondaryButton: {
+    backgroundColor: 'transparent',
+    borderWidth: 1,
   },
   buttonText: {
     color: '#fff',
