@@ -14,7 +14,6 @@ export const DEFAULT_LANGUAGE = 'en';
 // Supported languages
 export const SUPPORTED_LANGUAGES = [
   'en',
-  'ar',
   'de',
   'es',
   'fr',

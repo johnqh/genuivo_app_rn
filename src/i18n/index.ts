@@ -12,7 +12,6 @@ import { resources } from '@/assets/locales';
 
 const SUPPORTED_LANGUAGES = [
   'en',
-  'ar',
   'de',
   'es',
   'fr',

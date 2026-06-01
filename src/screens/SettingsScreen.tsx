@@ -31,7 +31,6 @@ import { trackScreenView, trackButtonClick, trackEvent } from '@/analytics';
 /** Display names for supported languages (in their native script). */
 const LANGUAGE_LABELS: Record<string, string> = {
   en: 'English',
-  ar: 'العربية',
   de: 'Deutsch',
   es: 'Español',
   fr: 'Français',
