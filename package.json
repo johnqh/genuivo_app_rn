@@ -1,6 +1,6 @@
 {
   "name": "genuivo_app_rn",
-  "version": "1.0.59",
+  "version": "1.0.60",
   "displayName": "Starter App",
   "private": true,
   "scripts": {
@@ -37,7 +37,7 @@
     "@sudobility/auth_lib": "^0.0.77",
     "@sudobility/building_blocks_rn": "^0.0.42",
     "@sudobility/design": "^1.1.31",
-    "@sudobility/di": "^1.5.57",
+    "@sudobility/di": "^1.5.58",
     "@sudobility/di_rn": "^0.1.101",
     "@sudobility/genui_rn": "^0.1.33",
     "@sudobility/genuivo_client": "^0.0.27",
