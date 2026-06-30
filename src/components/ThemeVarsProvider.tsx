@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, useColorScheme } from 'react-native';
+import { StyleSheet, View, useColorScheme } from 'react-native';
 import { useSettingsStore } from '@/stores/settingsStore';
 import { lightThemeVars, darkThemeVars } from '@/config/themeVars';
 
@@ -22,8 +22,12 @@ export function ThemeVarsProvider({
   const isDark =
     theme === 'dark' || (theme === 'system' && systemColorScheme === 'dark');
   return (
-    <View style={[{ flex: 1 }, isDark ? darkThemeVars : lightThemeVars]}>
+    <View style={[styles.fill, isDark ? darkThemeVars : lightThemeVars]}>
       {children}
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  fill: { flex: 1 },
+});

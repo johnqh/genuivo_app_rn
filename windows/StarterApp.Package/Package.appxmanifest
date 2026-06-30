@@ -9,7 +9,7 @@
   <Identity
     Name="StarterApp"
     Publisher="CN=johnhuang"
-    Version="1.0.62.0" />
+    Version="1.0.63.0" />
 
   <Properties>
     <DisplayName>Starter App</DisplayName>
@@ -18,8 +18,8 @@
   </Properties>
 
   <Dependencies>
-    <TargetDeviceFamily Name="Windows.Universal" MinVersion="1.0.62.0" MaxVersionTested="10.0.0.0" />
-    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="1.0.62.0" MaxVersionTested="10.0.17763.0" />
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="1.0.63.0" MaxVersionTested="10.0.0.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="1.0.63.0" MaxVersionTested="10.0.17763.0" />
   </Dependencies>
 
   <Resources>
