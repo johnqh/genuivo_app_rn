@@ -6,6 +6,8 @@ interface GoogleIconProps {
 }
 
 export default function GoogleIcon({ size = 20 }: GoogleIconProps) {
+  // EXCEPTION: the four fills below are Google's fixed brand-logo colors. They
+  // are an identity mark, not themed surfaces, so they must NOT theme-flip.
   return (
     <Svg width={size} height={size} viewBox='0 0 48 48'>
       <Path

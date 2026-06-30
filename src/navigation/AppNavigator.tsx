@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Platform, useColorScheme } from 'react-native';
+import { colorScheme as nativewindColorScheme } from 'nativewind';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
@@ -11,7 +12,12 @@ import {
   Cog6ToothIcon as Cog6ToothIconSolid,
 } from 'react-native-heroicons/solid';
 
-import { lightTheme, darkTheme } from '@/config/theme';
+import {
+  lightTheme,
+  darkTheme,
+  lightAppColors,
+  darkAppColors,
+} from '@/config/theme';
 import { useSettingsStore } from '@/stores/settingsStore';
 import type { RootTabParamList } from './types';
 
@@ -83,7 +89,11 @@ function MobileNavigator({ theme }: { theme: typeof lightTheme }) {
         screenOptions={{
           headerShown: false,
           tabBarActiveTintColor: theme.colors.primary,
-          tabBarInactiveTintColor: theme.dark ? '#9ca3af' : '#6b7280',
+          // Inactive tint is a concrete color (React Navigation can't take a
+          // className), so derive it from the muted-foreground design token.
+          tabBarInactiveTintColor: theme.dark
+            ? darkAppColors.textMuted
+            : lightAppColors.textMuted,
           tabBarStyle: {
             backgroundColor: theme.colors.card,
             borderTopColor: theme.colors.border,
@@ -119,6 +129,13 @@ export function AppNavigator() {
       ? systemColorScheme === 'dark'
       : userTheme === 'dark';
   const theme = isDark ? darkTheme : lightTheme;
+
+  // Keep NativeWind's color scheme (used by @sudobility/components-rn `dark:`
+  // classes and the ThemeVarsProvider) in lockstep with the app's resolved
+  // theme, even when the user overrides the system setting.
+  React.useEffect(() => {
+    nativewindColorScheme.set(isDark ? 'dark' : 'light');
+  }, [isDark]);
 
   if (isDesktop) {
     return <DesktopNavigator theme={theme} />;

@@ -1,38 +1,24 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  useColorScheme,
-  ActivityIndicator,
-} from 'react-native';
+import { View, ActivityIndicator } from 'react-native';
+import { Heading } from '@sudobility/components-rn';
+import { useAppColors } from '@/hooks/useAppColors';
 import { APP_NAME } from '@/config/constants';
 
 export default function SplashScreen() {
-  const colorScheme = useColorScheme();
-  const bg = colorScheme === 'dark' ? '#111827' : '#ffffff';
-  const textColor = colorScheme === 'dark' ? '#f9fafb' : '#111827';
+  // ActivityIndicator needs a concrete color (no className), so derive it from
+  // the active design tokens via useAppColors rather than a hardcoded literal.
+  const appColors = useAppColors();
 
   return (
-    <View style={[styles.container, { backgroundColor: bg }]}>
-      <Text style={[styles.title, { color: textColor }]}>{APP_NAME}</Text>
-      <ActivityIndicator size='large' color='#2563eb' style={styles.spinner} />
+    <View className='flex-1 items-center justify-center bg-background'>
+      <Heading level={1} size='3xl' className='mb-6'>
+        {APP_NAME}
+      </Heading>
+      <ActivityIndicator
+        size='large'
+        color={appColors.primary}
+        className='mt-4'
+      />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    marginBottom: 24,
-  },
-  spinner: {
-    marginTop: 16,
-  },
-});

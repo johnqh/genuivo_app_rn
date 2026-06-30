@@ -1,4 +1,6 @@
 import '@/polyfills/localStorage'; // Must be first — before any Zustand store import
+import './global.css'; // NativeWind: Tailwind directives for className styling
+import '@/config/designTheme'; // Activate the design-system theme (before any variants render)
 import 'react-native-gesture-handler';
 import '@/i18n'; // Initialize i18n
 import React, { useState, useEffect } from 'react';
@@ -13,6 +15,7 @@ import { AuthProvider } from '@/context/AuthContext';
 import { ApiProvider } from '@/context/ApiContext';
 import { useAuth } from '@/context/AuthContext';
 import { ThemeProvider } from '@sudobility/building_blocks_rn';
+import { ThemeVarsProvider } from '@/components/ThemeVarsProvider';
 import { AppNavigator } from '@/navigation';
 import SplashScreen from '@/screens/SplashScreen';
 import { initializeAllServices } from '@/di/initializeServices';
@@ -68,17 +71,19 @@ export default function App() {
 
   return (
     <GestureHandlerRootView style={styles.container}>
-      <SafeAreaProvider>
-        <ThemeProvider>
-          <AuthProvider>
-            <ApiProvider>
-              <QueryClientProvider client={queryClient}>
-                <AppContent />
-              </QueryClientProvider>
-            </ApiProvider>
-          </AuthProvider>
-        </ThemeProvider>
-      </SafeAreaProvider>
+      <ThemeVarsProvider>
+        <SafeAreaProvider>
+          <ThemeProvider>
+            <AuthProvider>
+              <ApiProvider>
+                <QueryClientProvider client={queryClient}>
+                  <AppContent />
+                </QueryClientProvider>
+              </ApiProvider>
+            </AuthProvider>
+          </ThemeProvider>
+        </SafeAreaProvider>
+      </ThemeVarsProvider>
     </GestureHandlerRootView>
   );
 }

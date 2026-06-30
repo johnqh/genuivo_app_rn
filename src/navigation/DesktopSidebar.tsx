@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { View, Pressable } from 'react-native';
+import { Heading, Text } from '@sudobility/components-rn';
 import {
   ChatBubbleLeftRightIcon,
   Cog6ToothIcon,
@@ -8,7 +9,6 @@ import {
   ChatBubbleLeftRightIcon as ChatBubbleLeftRightIconSolid,
   Cog6ToothIcon as Cog6ToothIconSolid,
 } from 'react-native-heroicons/solid';
-import { useAppColors } from '@/hooks/useAppColors';
 
 export type SidebarTab = 'ChatTab' | 'SettingsTab';
 
@@ -24,94 +24,55 @@ const tabs: { key: SidebarTab; label: string }[] = [
   { key: 'SettingsTab', label: 'Settings' },
 ];
 
-function TabIcon({
-  tab,
-  focused,
-  color,
-}: {
-  tab: SidebarTab;
-  focused: boolean;
-  color: string;
-}) {
+function TabIcon({ tab, focused }: { tab: SidebarTab; focused: boolean }) {
+  // Icons are tinted via className (cssInterop maps text color -> Svg color).
+  const className = focused ? 'text-primary' : 'text-muted-foreground';
   switch (tab) {
     case 'ChatTab':
       return focused ? (
-        <ChatBubbleLeftRightIconSolid color={color} size={ICON_SIZE} />
+        <ChatBubbleLeftRightIconSolid className={className} size={ICON_SIZE} />
       ) : (
-        <ChatBubbleLeftRightIcon color={color} size={ICON_SIZE} />
+        <ChatBubbleLeftRightIcon className={className} size={ICON_SIZE} />
       );
     case 'SettingsTab':
       return focused ? (
-        <Cog6ToothIconSolid color={color} size={ICON_SIZE} />
+        <Cog6ToothIconSolid className={className} size={ICON_SIZE} />
       ) : (
-        <Cog6ToothIcon color={color} size={ICON_SIZE} />
+        <Cog6ToothIcon className={className} size={ICON_SIZE} />
       );
   }
 }
 
 export function DesktopSidebar({ activeTab, onTabPress }: DesktopSidebarProps) {
-  const appColors = useAppColors();
-
   return (
-    <View
-      style={[
-        styles.sidebar,
-        { backgroundColor: appColors.card, borderRightColor: appColors.border },
-      ]}
-    >
-      <View style={styles.logo}>
-        <Text style={[styles.logoText, { color: appColors.primary }]}>G</Text>
+    <View className='w-20 items-center border-r border-border bg-card pt-2'>
+      <View className='mb-4 h-10 w-10 items-center justify-center rounded-md'>
+        <Heading level={2} size='xl' color='primary'>
+          G
+        </Heading>
       </View>
       {tabs.map(({ key, label }) => {
         const focused = activeTab === key;
-        const color = focused ? appColors.primary : appColors.textMuted;
         return (
           <Pressable
             key={key}
-            style={[
-              styles.tabItem,
-              focused && { backgroundColor: appColors.background },
-            ]}
+            className={`mb-1 w-16 items-center rounded-md py-2 ${
+              focused ? 'bg-background' : ''
+            }`}
             onPress={() => onTabPress(key)}
           >
-            <TabIcon tab={key} focused={focused} color={color} />
-            <Text style={[styles.tabLabel, { color }]}>{label}</Text>
+            <TabIcon tab={key} focused={focused} />
+            <Text
+              size='xs'
+              weight='medium'
+              color={focused ? 'primary' : 'muted'}
+              className='mt-1'
+            >
+              {label}
+            </Text>
           </Pressable>
         );
       })}
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  sidebar: {
-    width: 80,
-    borderRightWidth: StyleSheet.hairlineWidth,
-    paddingTop: 8,
-    alignItems: 'center',
-  },
-  logo: {
-    width: 40,
-    height: 40,
-    borderRadius: 8,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 16,
-  },
-  logoText: {
-    fontSize: 22,
-    fontWeight: '700',
-  },
-  tabItem: {
-    width: 64,
-    paddingVertical: 8,
-    borderRadius: 8,
-    alignItems: 'center',
-    marginBottom: 4,
-  },
-  tabLabel: {
-    fontSize: 10,
-    marginTop: 4,
-    fontWeight: '500',
-  },
-});
