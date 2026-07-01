@@ -1,6 +1,6 @@
 {
   "name": "genuivo_app_rn",
-  "version": "1.0.64",
+  "version": "1.0.65",
   "displayName": "Starter App",
   "private": true,
   "scripts": {
@@ -34,7 +34,7 @@
     "@react-navigation/bottom-tabs": "^7.10.1",
     "@react-navigation/native": "^7.1.28",
     "@react-navigation/native-stack": "^7.10.1",
-    "@sudobility/auth_lib": "^0.0.81",
+    "@sudobility/auth_lib": "^0.0.82",
     "@sudobility/building_blocks_rn": "^0.0.56",
     "@sudobility/components-rn": "^1.0.82",
     "@sudobility/design": "^1.1.40",
